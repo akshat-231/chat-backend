@@ -11,7 +11,7 @@ const io= require("socket.io")(httpServer, {
   }
 });
 const color = require("colors");
-const { get_Current_User, user_Disconnect, join_User } = require("./dummyuser");
+const { get_Current_User, user_Disconnect, join_User } = require("./dummyUser");
 
 //app.use(express());
 
