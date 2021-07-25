@@ -5,7 +5,7 @@ app.use(cors());
 const httpServer = require("http").createServer(app);
 const io= require("socket.io")(httpServer, {
  cors: {
-    origin: "http://localhost:3000",
+    // origin: "http://localhost:3000",
     methods: ["GET", "POST"],
     credentials: true
   }
@@ -15,7 +15,7 @@ const { get_Current_User, user_Disconnect, join_User } = require("./dummyuser");
 
 //app.use(express());
 
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 
 httpServer.listen(
